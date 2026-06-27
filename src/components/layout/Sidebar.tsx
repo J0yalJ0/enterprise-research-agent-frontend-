@@ -5,7 +5,6 @@ import {
   Users,
   Newspaper,
   FileText,
-  Settings,
   ShieldCheck,
   Zap,
   X
@@ -27,8 +26,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentPath, onNavigate, isOpe
     { name: "Strategic Research", path: "research", icon: Search },
     { name: "Competitor Analysis", path: "competitors", icon: Users },
     { name: "Market Intelligence", path: "news", icon: Newspaper },
-    { name: "Research Dossiers", path: "reports", icon: FileText },
-    { name: "Workspace Settings", path: "settings", icon: Settings }
+    { name: "Research Dossiers", path: "reports", icon: FileText }
   ];
 
   return (

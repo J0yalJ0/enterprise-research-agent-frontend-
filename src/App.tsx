@@ -7,7 +7,6 @@ import ResearchPage from "./app/research/page";
 import CompetitorsPage from "./app/competitors/page";
 import NewsPage from "./app/news/page";
 import ReportsPage from "./app/reports/page";
-import SettingsPage from "./app/settings/page";
 
 export default function App() {
   const [currentPath, setCurrentPath] = useState<string>("dashboard");
@@ -24,8 +23,6 @@ export default function App() {
         return <NewsPage />;
       case "reports":
         return <ReportsPage />;
-      case "settings":
-        return <SettingsPage />;
       default:
         return <DashboardPage />;
     }
