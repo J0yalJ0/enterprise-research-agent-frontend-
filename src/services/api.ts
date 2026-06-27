@@ -1,15 +1,13 @@
 import axios from "axios";
 import { CompanyData } from "../types";
 
-const API_BASE_URL =
-  import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
-
+// Production Render Backend
 const apiClient = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: "https://enterprise-research-agent.onrender.com",
   headers: {
     "Content-Type": "application/json",
   },
-  timeout: 30000,
+  timeout: 60000,
 });
 
 export const apiService = {
@@ -20,7 +18,7 @@ export const apiService = {
       throw new Error("Company name is required.");
     }
 
-    const response = await apiClient.post("/analyze", {
+    const response = await apiClient.post<CompanyData>("/analyze", {
       company: trimmedName,
     });
 
@@ -51,3 +49,5 @@ export const apiService = {
     return response.data;
   },
 };
+
+export default apiService;
