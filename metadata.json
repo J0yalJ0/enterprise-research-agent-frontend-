@@ -1,0 +1,6 @@
+{
+  "name": "Enterprise AI Research Agent",
+  "description": "Enterprise-grade AI research assistant for corporate strategy, investment banking, and market intelligence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
